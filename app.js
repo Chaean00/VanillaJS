@@ -1,38 +1,9 @@
-const h1 = document.querySelector(".hello h1");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-function handleTitleClick() {
-    h1.style.color = "blue";
+function OnLoginBtnClick() {
+    const username = loginInput.value;
+    console.log(username);
 }
 
-function handleMouseEnter() {
-    h1.innerText = "Mouse is here";
-}
-
-function handleMouseLeave() {
-    h1.innerText = "Mouse is gon!";
-}
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-    alert("copy!");
-}
-
-function handleWindowOffline() {
-    alert("Offline");
-}
-
-function handleWindowOnline() {
-    alert("Online");
-}
-
-h1.addEventListener("click", handleTitleClick);
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+loginButton.addEventListener("click", OnLoginBtnClick);
